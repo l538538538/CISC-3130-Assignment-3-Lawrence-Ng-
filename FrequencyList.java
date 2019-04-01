@@ -14,12 +14,13 @@ public class FrequencyList {
 
         while(fileInput.hasNext()){
         	String nextWord = fileInput.next();
-        	if(words.contains(nextWord)){
-        		int index = words.indexOf(nextWord);
+        	String lower = nextWord.toLowerCase();
+        	if(words.contains(lower)){
+        		int index = words.indexOf(lower);
         		count.set(index, count.get(index) + 1);
         		}
         		else{
-        			words.add(nextWord);
+        			words.add(lower);
         			count.add(1);
         			}
              }
